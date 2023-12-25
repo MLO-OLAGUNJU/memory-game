@@ -55,7 +55,7 @@ cardArray.sort(() => 0.5 - Math.random());
 const gridDisplay = document.querySelector("#grid");
 
 function createBoard() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < cardArray.length /* or i < 12 (use any!)*/; i++) {
     const card = document.createElement("img");
     card.setAttribute("src", "images/blank.jpg");
     card.setAttribute("data-id", i);
