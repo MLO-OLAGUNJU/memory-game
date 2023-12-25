@@ -51,3 +51,7 @@ const cardArray = [
 
 //to sort the cards randomly shuffling
 cardArray.sort(() => 0.5 - Math.random());
+
+const gridDisplay = document.querySelector("#grid");
+
+console.log(gridDisplay);
