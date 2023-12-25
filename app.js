@@ -49,5 +49,5 @@ const cardArray = [
   },
 ];
 
-//to sort the cards randomly
+//to sort the cards randomly shuffling
 cardArray.sort(() => 0.5 - Math.random());
