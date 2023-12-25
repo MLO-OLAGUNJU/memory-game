@@ -5,14 +5,10 @@
   font-family: "Poppins", sans-serif;
 }
 
-img {
-  height: 150px;
-  width: 150px;
-}
-
 #grid {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   width: 400px;
   height: 300px;
 }
