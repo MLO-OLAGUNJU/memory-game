@@ -83,6 +83,9 @@ function checkMatch() {
     cards[optionOneId].removeEventListener("click", flipCard);
     cards[optionTwoid].removeEventListener("click", flipCard);
     cardswon.push(cardsChosen);
+  } else {
+    cards[optionOneId].setAttribute("src", "images/blank.png");
+    cards[optionTwoid].setAttribute("src", "images/blank.png");
   }
   cardsChosen = [];
   cardsChosenIds = [];
