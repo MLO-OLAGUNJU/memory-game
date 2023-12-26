@@ -73,7 +73,8 @@ function checkMatch() {
   const cards = document.querySelectorAll("#grid img");
   const optionOneId = cardsChosenIds[0];
   const optionTwoid = cardsChosenIds[1];
-  if (optionOneId) {
+  if (optionOneId == optionTwoid) {
+    alert("You have clicked the same image");
   }
   if (cardsChosen[0] === cardsChosen[1]) {
     alert("You found a match");
