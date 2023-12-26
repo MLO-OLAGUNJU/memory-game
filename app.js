@@ -13,11 +13,11 @@ const cardArray = [
   },
   {
     myName: "icecream",
-    img: "images/icecream.png",
+    img: "images/ice-cream.png",
   },
   {
     myName: "milkshake",
-    img: "images/milkshake.jpg",
+    img: "images/milkshake.png",
   },
   {
     myName: "pizza",
@@ -37,7 +37,7 @@ const cardArray = [
   },
   {
     myName: "icecream",
-    img: "images/icecream.png",
+    img: "images/ice-cream.png",
   },
   {
     myName: "milkshake",
@@ -73,4 +73,5 @@ function flipCard() {
   cardsChosen.push(cardArray[cardId].myName);
   console.log("clicked", cardId);
   console.log(cardsChosen);
+  this.setAttribute("src", cardArray[cardId].img);
 }
