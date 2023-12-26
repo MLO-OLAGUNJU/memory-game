@@ -67,11 +67,21 @@ function createBoard() {
 
 createBoard();
 
+function checkMatch() {
+  document.querySelectorAll("#grid img");
+
+  console.log("check for match!");
+  if (cardsChosen[0] === cardsChosen[1]) {
+    alert("You found a match");
+  }
+}
+
 function flipCard() {
   console.log(cardArray);
   const cardId = this.getAttribute("data-id");
   cardsChosen.push(cardArray[cardId].myName);
-  console.log("clicked", cardId);
-  console.log(cardsChosen);
   this.setAttribute("src", cardArray[cardId].img);
+  if (cardsChosen.length === 2) {
+    setTimeout(checkMatch, 500);
+  }
 }
