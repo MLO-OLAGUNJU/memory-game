@@ -83,7 +83,7 @@ function checkMatch() {
     cards[optionTwoid].setAttribute("src", "images/white.png");
     cards[optionOneId].removeEventListener("click", flipCard);
     cards[optionTwoid].removeEventListener("click", flipCard);
-    cardswon.push(cardsChosen);
+    resultDisplay.innerHTML = cardswon.push(cardsChosen);
   } else {
     cards[optionOneId].setAttribute("src", "images/blank.png");
     cards[optionTwoid].setAttribute("src", "images/blank.png");
@@ -93,6 +93,7 @@ function checkMatch() {
   cardsChosenIds = [];
 
   if (cardswon.length == cardArray.length / 2) {
+    resultDisplay.innerHTML = "Congratulations you found them all!";
   }
 }
 
