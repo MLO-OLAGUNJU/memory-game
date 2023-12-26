@@ -86,9 +86,12 @@ function checkMatch() {
   } else {
     cards[optionOneId].setAttribute("src", "images/blank.png");
     cards[optionTwoid].setAttribute("src", "images/blank.png");
+    alert ('Doesn\'t match, Try again!')
   }
   cardsChosen = [];
   cardsChosenIds = [];
+
+  if (cardswon.length == (cardArray.length/2))
 }
 
 function flipCard() {
