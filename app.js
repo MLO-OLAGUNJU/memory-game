@@ -71,16 +71,17 @@ createBoard();
 
 function checkMatch() {
   const cards = document.querySelectorAll("#grid img");
-  console.log(cards);
-  console.log("check for match!");
-  if (cardsChosen[0] === cardsChosen[1]) {
-    alert("You found a match");
-    cards[cardsChosenIds[0]].setAttribute("src", "images/white.png");
-    cards[cardsChosenIds[1]].setAttribute("src", "images/white.png");
-    cards[cardsChosenIds[0]].removeEventListener("click", flipCard);
-    cards[cardsChosenIds[1]].removeEventListener("click", flipCard);
-    cardswon.push(cardsChosen);
-  }
+  const optionOneId = cardsChosenIds[0];
+  const optionTwoid = cardsChosenIds[1];
+  if (cards)
+    if (cardsChosen[0] === cardsChosen[1]) {
+      alert("You found a match");
+      cards[cardsChosenIds[0]].setAttribute("src", "images/white.png");
+      cards[cardsChosenIds[1]].setAttribute("src", "images/white.png");
+      cards[cardsChosenIds[0]].removeEventListener("click", flipCard);
+      cards[cardsChosenIds[1]].removeEventListener("click", flipCard);
+      cardswon.push(cardsChosen);
+    }
   cardsChosen = [];
   cardsChosenIds = [];
 }
