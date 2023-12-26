@@ -3,12 +3,28 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-size: 30px;
 }
 
 #grid {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 400px;
-  height: 300px;
+  width: 420px;
+  height: 320px;
+  border: 10px solid #fff;
+  border-radius: 20px;
+}
+marquee {
+  background-color: #000;
+}
+main {
+  margin-left: 500px;
+  margin-top: 20px;
+}
+
+body {
+  padding-top: 40px;
+  background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 166, 1));
 }
