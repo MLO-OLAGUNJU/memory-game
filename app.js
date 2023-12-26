@@ -70,6 +70,7 @@ createBoard();
 function flipCard() {
   console.log(cardArray);
   const cardId = this.getAttribute("data-id");
-  console.log(cardArray[cardId].myName);
+  cardsChosen.push(cardArray[cardId].myName);
   console.log("clicked", cardId);
+  console.log(cardsChosen);
 }
