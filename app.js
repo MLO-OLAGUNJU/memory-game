@@ -75,6 +75,8 @@ function checkMatch() {
   const optionOneId = cardsChosenIds[0];
   const optionTwoid = cardsChosenIds[1];
   if (optionOneId == optionTwoid) {
+    cards[optionOneId].setAttribute("src", "images/blank.png");
+    cards[optionOneId].setAttribute("src", "images/blank.png");
     alert("You have clicked the same image");
   }
   if (cardsChosen[0] === cardsChosen[1]) {
@@ -83,17 +85,20 @@ function checkMatch() {
     cards[optionTwoid].setAttribute("src", "images/white.png");
     cards[optionOneId].removeEventListener("click", flipCard);
     cards[optionTwoid].removeEventListener("click", flipCard);
-    resultDisplay.innerHTML = cardswon.push(cardsChosen);
+    cardswon.push(cardsChosen);
   } else {
     cards[optionOneId].setAttribute("src", "images/blank.png");
     cards[optionTwoid].setAttribute("src", "images/blank.png");
     alert("Doesn't match, Try again!");
   }
+  resultDisplay.textContent /*innerHTML*/ = cardswon.length;
+
   cardsChosen = [];
   cardsChosenIds = [];
 
   if (cardswon.length == cardArray.length / 2) {
-    resultDisplay.innerHTML = "Congratulations you found them all!";
+    resultDisplay.textContent /*innerHTML*/ =
+      "Congratulations you found them all!";
   }
 }
 
